@@ -6,20 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class PenjualanDetail extends Model
 {
-    
+
     protected $guarded = [];
-    
+
     public function penjualans()
     {
         return $this->belongsTo(
-            penjualan::class, 'penjualan_id', 'id'
+            Penjualan::class, 'penjualan_id', 'id'
         );
     }
-    
-    public function barangs()
+
+    public function barang()
     {
         return $this->belongsTo(
-            barang::class, 'barang_id', 'id'
+            Barang::class, 'barang_id', 'id'
         );
     }//
 }
